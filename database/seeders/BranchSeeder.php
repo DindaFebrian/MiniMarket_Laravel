@@ -12,22 +12,22 @@ class BranchSeeder extends Seeder
         DB::table('branches')->insert([
             [
                 'branch_name' => 'Cabang Utama',
-                'address' => 'Jl. Raya No. 1',
-                'city' => 'Jakarta',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'branch_name' => 'Cabang Depok',
-                'address' => 'Jl. Merdeka No. 5',
-                'city' => 'Depok',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'branch_name' => 'Cabang Bandung',
-                'address' => 'Jl. Sukajadi No. 10',
+                'address' => 'Jl. Bandung No. 1',
                 'city' => 'Bandung',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'branch_name' => 'Cabang Cianjur',
+                'address' => 'Jl. Cianjur No. 5',
+                'city' => 'Cianjur',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'branch_name' => 'Cabang Bogor',
+                'address' => 'Jl. Bogor No. 10',
+                'city' => 'Bogor',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

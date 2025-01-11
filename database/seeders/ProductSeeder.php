@@ -11,23 +11,23 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                'product_name' => 'Laptop',
-                'price' => 12000000,
+                'product_name' => 'Baju Anak',
+                'price' => 75000,
                 'stock' => 50,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'product_name' => 'Smartphone',
-                'price' => 8000000,
-                'stock' => 30,
+                'product_name' => 'Sendal Anak',
+                'price' => 75000,
+                'stock' => 50,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'product_name' => 'Headphones',
-                'price' => 500000,
-                'stock' => 100,
+                'product_name' => 'Sepatu Anak',
+                'price' => 75000,
+                'stock' => 50,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
