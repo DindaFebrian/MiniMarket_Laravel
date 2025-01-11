@@ -12,6 +12,13 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $roles = [
+            ['name' => 'Admin', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Owner', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Kasir', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Manager', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Supervisor', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Gudang', 'created_at' => now(), 'updated_at' => now()],
+        ];
     }
 }
