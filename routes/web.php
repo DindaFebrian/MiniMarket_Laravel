@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TransactionDetailController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // ==========================================
@@ -26,6 +27,13 @@ Route::get('/dashboard', function () {
 
 // Rute untuk Registrasi
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+Route::post('/logout', function () {
+    Auth::logout();
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');
+
 
 // ==========================================
 // Authenticated Routes
