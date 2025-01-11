@@ -6,6 +6,14 @@
     <div class="bg-gray-900 shadow rounded-lg p-6">
         <div class="flex items-center justify-between mb-6">
             <h1 class="text-2xl font-bold text-pink-400">Transactions</h1>
+            
+            <!-- Tombol Print -->
+            <a href="{{ route('transactions.printPdf') }}"
+               class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg transition duration-300">
+                Print Transactions
+            </a>
+
+            <!-- Tombol Tambah Transaksi -->
             <a href="{{ url('/transactions/create') }}"
                class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg transition duration-300">
                 Add New Transaction

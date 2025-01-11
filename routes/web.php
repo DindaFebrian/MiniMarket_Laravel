@@ -50,6 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('transactions', TransactionController::class);
     Route::resource('transaction-details', TransactionDetailController::class);
+    Route::get('/transactions/print-pdf', [TransactionController::class, 'printPdf'])->name('transactions.printPdf');
+
 });
 
 // ==========================================
