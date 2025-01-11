@@ -4,7 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Branch;
 use Illuminate\Http\Request;
-
+use App\Models\Transaction;
+use App\Models\Stock;
+use App\Models\Product;
+use App\Models\Receipt;
+use App\Models\StockMovement;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Routing\Controller as BaseController;
 
 class BranchController extends Controller
 {
@@ -14,10 +20,7 @@ class BranchController extends Controller
         return view('branches.index', compact('branches'));
     }
 
-    public function create()
-    {
-        return view('branches.create');
-    }
+    
 
     public function store(Request $request)
     {

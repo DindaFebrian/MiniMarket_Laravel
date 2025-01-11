@@ -11,6 +11,13 @@ class Branch extends Model
 
     protected $fillable = ['branch_name', 'address', 'city'];
 
+
+    public function create()
+{
+    $branches = Branch::all(); // Ambil semua data cabang dari database
+    $employees = Employee::all(); // (Opsional) Tambahkan karyawan jika dibutuhkan
+    return view('transactions.create', compact('branches', 'employees'));
+}
     public function employees()
     {
         return $this->hasMany(Employee::class);
