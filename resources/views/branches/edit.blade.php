@@ -3,15 +3,14 @@
 @section('title', 'Edit Branch')
 
 @section('content')
-    <h1 class="mb-4">Edit Branch</h1>
+    <h1>Edit Branch</h1>
 
     <form action="{{ route('branches.update', $branch->id) }}" method="POST">
         @csrf <!-- Token keamanan untuk mencegah CSRF -->
         @method('PUT') <!-- Metode HTTP PUT untuk update -->
 
-        <!-- Branch Name -->
-        <div class="form-group mb-3">
-            <label for="branch_name" class="form-label">Branch Name</label>
+        <div class="form-group">
+            <label for="branch_name">Branch Name</label>
             <input
                 type="text"
                 name="branch_name"
@@ -19,13 +18,11 @@
                 class="form-control"
                 placeholder="Enter branch name"
                 value="{{ old('branch_name', $branch->branch_name) }}"
-                required
-            >
+                required>
         </div>
 
-        <!-- Address -->
-        <div class="form-group mb-3">
-            <label for="address" class="form-label">Address</label>
+        <div class="form-group">
+            <label for="address">Address</label>
             <textarea
                 name="address"
                 id="address"
@@ -35,9 +32,8 @@
                 required>{{ old('address', $branch->address) }}</textarea>
         </div>
 
-        <!-- City -->
-        <div class="form-group mb-3">
-            <label for="city" class="form-label">City</label>
+        <div class="form-group">
+            <label for="city">City</label>
             <input
                 type="text"
                 name="city"
@@ -45,14 +41,10 @@
                 class="form-control"
                 placeholder="Enter city"
                 value="{{ old('city', $branch->city) }}"
-                required
-            >
+                required>
         </div>
 
-        <!-- Buttons -->
-        <div class="d-flex justify-content-start mt-4">
-            <button type="submit" class="btn btn-primary me-2">Save Changes</button>
-            <a href="{{ route('branches.index') }}" class="btn btn-secondary">Cancel</a>
-        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a href="{{ route('branches.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
 @endsection
